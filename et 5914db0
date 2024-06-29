@@ -1,0 +1,100 @@
+[33m9621230[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m try 1
+[33m92bfd8a[m category filtered out as selected
+[33m9aa9246[m sms api sender changed
+[33m2f4ee30[m selling guide added to cleanout
+[33m5e7dd59[m clean out page added
+[33m270fdd2[m coming soon page added, rentals and sales too
+[33me67d374[m gift registry removed
+[33m81b2f50[m category updated
+[33m6a419c6[m refer card upgraded
+[33mc02acac[m try 7
+[33m3eee790[m try 6
+[33md567c81[m try 5
+[33m561dde0[m try 4
+[33mdde03fe[m try 3
+[33m82c697a[m try 2
+[33m7662dc2[m refer code added
+[33m9341be1[m try 1
+[33m33170ba[m issue fixed
+[33m16bb6ed[m few updates
+[33m15e73c7[m referral code sent through signup
+[33mc018e7b[m refer card updated
+[33me5ef492[m link updated on referral
+[33mb56e8bd[m status code changed on signup
+[33mb3e3630[m navbar changes
+[33me7fef5e[m coupon card added
+[33m2f0a3e9[m terms and conditions added to the sale your preowned
+[33m553eb5b[m preowned sale added
+[33m85e6e3b[m bug fixed on signup
+[33mb378a60[m user auth updated
+[33m8018a8e[m minor changes on signup form
+[33mb48c4e1[m referral code integrated
+[33m4800682[m referral added
+[33mfde8626[m changes on order details page
+[33m1a1037b[m mobile auth added
+[33m5e55fad[m newsletter added
+[33m0a5b183[m signup toast added
+[33m9306909[m console removed
+[33mc80ae92[m https sms gateway
+[33m69ec641[m toast was not good
+[33ma819f85[m signup otp added
+[33m7ee84c8[m user login & register validation added
+[33m1a8fbf6[m sms integration removed
+[33mab5b7f9[m Merge branch 'main' of https://github.com/atihar/kiporbo-frontend
+[33m13467c2[m my-orders added
+[33m6fba96e[m push
+[33m95c1106[m OTP updated
+[33m3be3284[m OTP updated
+[33mdc80d23[m static category upgraded
+[33ma75c3f5[m shipping updated
+[33m4f8c074[m skincare & cosmetics added
+[33m6b9bbd3[m category updated on navbar
+[33maf487d1[m site setting
+[33mfc84303[m category updated
+[33m25f6ffc[m district and division input added
+[33ma819a78[m menu updated
+[33m9a4dc40[m calculation updated
+[33mef18829[m shipping updated
+[33ma5829d5[m update on delivery and related products
+[33m7762288[m delivery charge updated
+[33m70b6790[m minor updates
+[33ma0d15f6[m url vulnerability fixed & added env
+[33m2eedfe3[m cart validation & URL encrypted
+[33mbc3589e[m checkout - login validation
+[33m5ec2a05[m category updated on homepage
+[33m79900f7[m changes on searchData
+[33m1ec4e2e[m few changes on search data
+[33m8910fd6[m search data
+[33m40d2a26[m footer link updated
+[33m54ca119[m footer updated
+[33m578141f[m category updated and merged
+[33m6247183[m category dynamic and search functionality done
+[33ma51e769[m order model completed and project merged
+[33m0d5b0a9[m image fixed
+[33m5cbdbff[m production ready
+[33m16751f9[m custom home page macys updated
+[33m943a901[m working on order information
+[33m9f54bb7[m static category added
+[33mabfa55e[m bdt removed
+[33ma6a9abb[m custom search field added
+[33m8e892f8[m checkout form validation added
+[33m0c159c3[m mobile menu updated
+[33md1273f9[m coupon cart fixed
+[33m2ac0c0b[m coupon code added
+[33m68e0b8e[m coupon code context issue
+[33m42c6fb7[m product details updated
+[33md7630a8[m trailing slash
+[33mb34ce28[m cors header
+[33m7835856[m jim jhim
+[33m216368d[m rim rim
+[33mea6521c[m clean
+[33m3fe8ab8[m tsx linted
+[33m4361449[m search filter integrated
+[33mb308e23[m till order
+[33macf06c0[m changes in registration
+[33mb04e638[m vercel uipdated
+[33me6fa3cc[m changes in the build
+[33m774bf5f[m index changes
+[33m9fa41a3[m registration notice
+[33m82c99d4[m next build
+[33mf498381[m registration test

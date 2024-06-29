@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "name": "Women Wear",
+    "slug": "women-wear"
+  },
+  {
+    "id": 2,
+    "name": "Men Wear",
+    "slug": "men-wear"
+  },
+  {
+    "id": 3,
+    "name": "Shoes",
+    "slug": "shoes"
+  },
+  {
+    "id": 4,
+    "name": "Skincare & cosmetics",
+    "slug": "skincare-cosmetics"
+  },
+  {
+    "id": 5,
+    "name": "Accessories",
+    "slug": "accessories"
+  },
+  {
+    "id": 6,
+    "name": "Pre owned",
+    "slug": "pre-owned"
+  },
+  {
+    "id": 7,
+    "name": "Rentals",
+    "slug": "rentals"
+  },
+  {
+    "id": 8,
+    "name": "Sale",
+    "slug": "sale"
+  },
+
+  {
+    "id": 9,
+    "name": "Women All Clothings",
+    "slug": "women-all-clothings"
+  },
+  {
+    "id": 10,
+    "name": "Women KP Originals",
+    "slug": "women-kp-originals"
+  },
+  {
+    "id": 11,
+    "name": "Women new arrival",
+    "slug": "women-new-arrival"
+  },
+  {
+    "id": 12,
+    "name": "Women suits jackets",
+    "slug": "women-suits-jackets"
+  },
+  {
+    "id": 13,
+    "name": "Women pants",
+    "slug": "women-pants"
+  },
+  {
+    "id": 14,
+    "name": "Women pants",
+    "slug": "women-tops"
+  },
+  {
+    "id": 15,
+    "name": "Women breeze pant",
+    "slug": "women-breeze-pant"
+  },
+
+  {
+    "id": 16,
+    "name": "Women pre owned",
+    "slug": "women-pre-owned"
+  },
+  {
+    "id": 17,
+    "name": "Women rentals",
+    "slug": "women-rentals"
+  },
+  {
+    "id": 18,
+    "name": "Women jacket hoodies",
+    "slug": "women-jacket-hoodies"
+  },
+  {
+    "id": 19,
+    "name": "Women summer hoodies",
+    "slug": "women-summer-jackets"
+  },
+  {
+    "id": 20,
+    "name": "Women suits",
+    "slug": "women-suits"
+  },
+  {
+    "id": 21,
+    "name": "Women sweat shirts",
+    "slug": "women-sweat-shirts"
+  },
+  {
+    "id": 22,
+    "name": "Women jackets",
+    "slug": "women-jackets"
+  },
+  {
+    "id": 23,
+    "name": "Women flats",
+    "slug": "women-flats"
+  },
+  {
+    "id": 24,
+    "name": "Women sandal",
+    "slug": "women-sandals"
+  },
+  {
+    "id": 25,
+    "name": "Women shoes",
+    "slug": "women-shoes"
+  },
+  {
+    "id": 26,
+    "name": "Women flip flops",
+    "slug": "women-flip-flops"
+  },
+  {
+    "id": 27,
+    "name": "Women heels",
+    "slug": "women-heels"
+  },
+  {
+    "id": 28,
+    "name": "Women sneakers",
+    "slug": "women-sneakers"
+  },
+  {
+    "id": 29,
+    "name": "Women jump suits",
+    "slug": "women-jump-suits"
+  },
+  {
+    "id": 30,
+    "name": "Women tops",
+    "slug": "women-tops"
+  },
+  {
+    "id": 31,
+    "name": "Women tees",
+    "slug": "women-tees"
+  },
+  {
+    "id": 32,
+    "name": "Women shirts",
+    "slug": "women-shirts"
+  },
+  {
+    "id": 33,
+    "name": "Women foundation",
+    "slug": "women-foundation"
+  },
+  {
+    "id": 34,
+    "name": "Women eye liner",
+    "slug": "women-eye-liner"
+  },
+  {
+    "id": 35,
+    "name": "Women lipstick",
+    "slug": "womens-lipstick"
+  },
+  {
+    "id": 36,
+    "name": "Women sales & clearance",
+    "slug": "women-sales-clearance"
+  },
+  {
+    "id": 37,
+    "name": "Women makeup",
+    "slug": "women-makeup"
+  },
+  {
+    "id": 38,
+    "name": "Women skincare",
+    "slug": "women-skincare"
+  },
+  {
+    "id": 39,
+    "name": "Women premium beauty",
+    "slug": "women-premium-beauty"
+  },
+  {
+    "id": 40,
+    "name": "Men All Clothings",
+    "slug": "men-all-clothings"
+  },
+  {
+    "id": 41,
+    "name": "Men KP Originals",
+    "slug": "men-kp-originals"
+  },
+  {
+    "id": 42,
+    "name": "Men new arrival",
+    "slug": "men-new-arrival"
+  },
+  {
+    "id": 43,
+    "name": "Men suits jackets",
+    "slug": "men-suits-jackets"
+  },
+  {
+    "id": 44,
+    "name": "Men pants",
+    "slug": "men-pants"
+  },
+  {
+    "id": 45,
+    "name": "Men breeze pant",
+    "slug": "men-breeze-pant"
+  },
+
+  {
+    "id": 46,
+    "name": "Men pre owned",
+    "slug": "men-pre-owned"
+  },
+  {
+    "id": 47,
+    "name": "Men rentals",
+    "slug": "men-rentals"
+  },
+  {
+    "id": 48,
+    "name": "Men jacket hoodies",
+    "slug": "men-jacket-hoodies"
+  },
+  {
+    "id": 49,
+    "name": "Men summer hoodies",
+    "slug": "men-summer-jackets"
+  },
+  {
+    "id": 50,
+    "name": "Men suits",
+    "slug": "men-suits"
+  },
+  {
+    "id": 51,
+    "name": "Men sweat shirts",
+    "slug": "men-sweat-shirts"
+  },
+  {
+    "id": 52,
+    "name": "Men jackets",
+    "slug": "men-jackets"
+  },
+
+  {
+    "id": 53,
+    "name": "Men sandal",
+    "slug": "men-sandals"
+  },
+  {
+    "id": 54,
+    "name": "Men shoes",
+    "slug": "men-shoes"
+  },
+  {
+    "id": 55,
+    "name": "Men flip flops",
+    "slug": "men-flip-flops"
+  },
+
+  {
+    "id": 56,
+    "name": "Men sneakers",
+    "slug": "men-sneakers"
+  },
+  {
+    "id": 57,
+    "name": "Men sales clearance",
+    "slug": "men-sales-clearance"
+  },
+  {
+    "id": 58,
+    "name": "Men shirts",
+    "slug": "men-shirts"
+  },
+  {
+    "id": 59,
+    "name": "Women",
+    "slug": "women"
+  },
+  {
+    "id": 60,
+    "name": "Men",
+    "slug": "men"
+  },
+  {
+    "id": 61,
+    "name": "Kids & Babies",
+    "slug": "kids"
+  },
+  {
+    "id": 62,
+    "name": "Handbags",
+    "slug": "handbags"
+  },
+  {
+    "id": 63,
+    "name": "Watches",
+    "slug": "watches"
+  },
+  {
+    "id": 64,
+    "name": "Cosmetics",
+    "slug": "cosmetics"
+  },
+  {
+    "id": 65,
+    "name": "Rentals",
+    "slug": "rentals"
+  },
+  {
+    "id": 66,
+    "name": "Juniors",
+    "slug": "juniors"
+  },
+  {
+    "id": 67,
+    "name": "Fine jewelry",
+    "slug": "jewelry"
+  },
+  {
+    "id": 68,
+    "name": "Pre Owned",
+    "slug": "pre-owned"
+  },
+  {
+    "id": 69,
+    "name": "Bath",
+    "slug": "bath"
+  }
+]
