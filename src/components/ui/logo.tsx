@@ -21,6 +21,7 @@ const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
 				layout="fixed"
 				loading="eager"
 			/>
+			
 		</Link>
 	);
 };

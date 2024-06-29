@@ -1,17 +1,17 @@
 export const siteSettings = {
-  name: "Ki Porbo",
+  name: "S&F_shop",
   description: "Where budget meets quality",
   author: {
-    name: "Kiporbo.",
+    name: "S&F_shop.",
     websiteUrl: "https://kiporbo.com",
     address: "",
   },
   logo: {
-    url: "/assets/images/logo.png.png",
+    url: "/assets/images/agro-tech.png",
     alt: "kiporbo",
     href: "/",
-    width: 95,
-    height: 44,
+    width: 180,
+    height: 120,
   },
   defaultLanguage: "en",
   currencyCode: "TK",
