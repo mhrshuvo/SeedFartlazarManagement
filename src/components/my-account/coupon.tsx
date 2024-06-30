@@ -13,7 +13,7 @@ const Coupon: React.FC<CouponProps> = ({
 }) => {
   return (
     <div className="container" style={{ position: "relative" }}>
-      <img src={"/assets/images/coupon/coupon.png"} alt="Coupon Image" />
+      {/* <img src={"/assets/images/coupon/coupon.png"} alt="Coupon Image" /> */}
       <div
         style={{
           position: "absolute",
@@ -55,7 +55,7 @@ const Coupon: React.FC<CouponProps> = ({
           top: "60%",
           left: "35%",
           transform: "translate(-50%, -50%)",
-          color: "#fff", // Text color
+         
           fontSize: "30px", // Adjust font size as needed
           fontWeight: "bold", // Adjust font weight as needed
           zIndex: 1, // Set z-index to ensure text is on top

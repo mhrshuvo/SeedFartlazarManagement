@@ -12,7 +12,7 @@ const Refer = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const shareUrl = `https://www.kiporbo.com/?referral_code=${referralCode}&referral=true`;
+  const shareUrl = `https://www.127.0.0.0:8000/?referral_code=${referralCode}&referral=true`;
   const title = "Use refer code to get discounts";
 
   useEffect(() => {
@@ -46,11 +46,11 @@ const Refer = () => {
       {/* Left side */}
       <div className="md:flex items-center text-center justify-center md:gap-16">
         <div className="max-w-md">
-          <img
+          {/* <img
             src="/assets/images/refer/refer.png"
             className="rounded-lg"
             alt="refer"
-          />
+          /> */}
         </div>
 
         {/* Right side */}
