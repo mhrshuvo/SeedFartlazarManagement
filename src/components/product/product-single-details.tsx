@@ -220,6 +220,7 @@ const ProductSingleDetails: React.FC = () => {
               setQuantity((prev) => (prev !== 1 ? prev - 1 : 1))
             }
             disableDecrement={quantity === 1}
+            disableIncrement={quantity === data?.stock}
           />
           <Button
             onClick={addToCart}
