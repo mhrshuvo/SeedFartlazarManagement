@@ -203,12 +203,12 @@ const ProductSingleDetails: React.FC = () => {
           </div>
 
           <div>
-            <h2
+            {/* <h2
               onClick={toggleSidebar}
               className="font-semibold underline cursor-pointer"
             >
               Size guide
-            </h2>
+            </h2> */}
             <SizeChart isOpen={isSidebarOpen} onClose={toggleSidebar} />
           </div>
         </div>

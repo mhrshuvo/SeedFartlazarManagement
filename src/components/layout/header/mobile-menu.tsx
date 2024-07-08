@@ -24,7 +24,7 @@ import { ROUTES } from "@utils/routes";
 const social = [
   {
     id: 0,
-    link: "https://www.facebook.com/kiporbo/",
+    link: "https://www.facebook.com/df/",
     icon: <IoLogoFacebook />,
     className: "facebook",
     title: "text-facebook",
@@ -32,7 +32,7 @@ const social = [
 
   {
     id: 3,
-    link: "https://www.instagram.com/kiporbo/",
+    link: "https://www.instagram.com/df/",
     icon: <IoLogoInstagram />,
     className: "instagram",
     title: "text-instagram",
@@ -155,7 +155,7 @@ export default function MobileMenu() {
         <Scrollbar className="menu-scrollbar flex-grow mb-auto">
           {" "}
           <div className="flex flex-col px-0 lg:px-2 text-heading">
-            <h3 className="text-lg font-semibold p-3">Shop by department</h3>
+            {/* <h3 className="text-lg font-semibold p-3">Shop by department</h3>
             <ul className="mobileMenu">
               {site_header.mobileMenu.map((menu, index) => {
                 const dept: number = 1;
@@ -172,13 +172,13 @@ export default function MobileMenu() {
                   />
                 );
               })}
-            </ul>
+            </ul> */}
           </div>
         </Scrollbar>
         <hr />
         <div className="grid gap-2 p-4 text-sm">
           <div onClick={closeSidebar}>
-            <Link
+            {/* <Link
               href={"/search?category=women-eid-collection"}
               className="flex gap-2 mb-3 text-red-500"
             >
@@ -197,7 +197,7 @@ export default function MobileMenu() {
                 />
               </svg>
               <p className="text-[16px]">Eid Collection</p>
-            </Link>
+            </Link> */}
           </div>
 
           {/* <div onClick={closeSidebar}>
@@ -241,18 +241,18 @@ export default function MobileMenu() {
           </p>
 
           <div className="flex justify-between text-sm mt-6">
-            <div onClick={closeSidebar}>
+            {/* <div onClick={closeSidebar}>
               <Link href="/policy/privacy" className="text-gray-700">
                 {" "}
                 <p>Privacy Policy</p>
               </Link>
-            </div>
-            <div onClick={closeSidebar}>
+            </div> */}
+            {/* <div onClick={closeSidebar}>
               <Link href="/terms" className="text-gray-700">
                 {" "}
                 <p>Terms & Conditions</p>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
