@@ -26,6 +26,6 @@ module.exports = {
   },
   i18n,
   images: {
-    domains: ["192.168.68.116", "localhost" , "127.0.0.1"],
+    domains: ["192.168.68.103", "localhost", "127.0.0.1"],
   },
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "@components/ui/button";
-import Counter from "@components/common/counter";
 import { useRouter } from "next/router";
 import { useProductQuery } from "@framework/product/get-product";
 import { getVariations } from "@framework/utils/get-variations";
@@ -12,14 +11,13 @@ import Link from "@components/ui/link";
 import { useWindowSize } from "@utils/use-window-size";
 import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "swiper/react";
-// import { FaRegShareSquare } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Modal from "@components/common/modal/modal";
 import ProductShareModal from "./product-share-modal";
 import { IoShareSocialOutline } from "react-icons/io5";
-
 import ProductFlashSaleGridLoader from "@components/ui/loaders/product-flash-sale-grid-loader";
 import SizeChart from "./product-size-chart";
+import Counter from "@components/common/counter";
 
 const productGalleryCarouselResponsive = {
   "768": {
@@ -38,7 +36,7 @@ const ProductSingleDetails: React.FC = () => {
   const { data, isLoading } = useProductQuery(slug as string);
   const { addItemToCart } = useCart();
   const [attributes, setAttributes] = useState<{ [key: string]: string }>({});
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState<number>(1); // State for quantity
   const [addToCartLoader, setAddToCartLoader] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -68,7 +66,12 @@ const ProductSingleDetails: React.FC = () => {
     transformOrigin: `${hoverPosition.x * 100}% ${hoverPosition.y * 100}%`,
   };
 
-  if (isLoading) return <div className="m-10"><ProductFlashSaleGridLoader   /></div>;
+  if (isLoading)
+    return (
+      <div className="m-10">
+        <ProductFlashSaleGridLoader />
+      </div>
+    );
   const variations = getVariations(data?.variations);
 
   const isSelected = !isEmpty(variations)
@@ -80,7 +83,7 @@ const ProductSingleDetails: React.FC = () => {
 
   function addToCart() {
     if (!isSelected) return;
-    // to show btn feedback while product carting
+    // Show button feedback while adding to cart
     setAddToCartLoader(true);
     setTimeout(() => {
       setAddToCartLoader(false);
@@ -88,8 +91,6 @@ const ProductSingleDetails: React.FC = () => {
 
     const item = generateCartItem(data!, attributes);
     addItemToCart(item, quantity);
-    // No toast message, directly change button text
-    // setShowModal(true);
   }
 
   function handleAttribute(attribute: any) {
@@ -105,7 +106,6 @@ const ProductSingleDetails: React.FC = () => {
   };
 
   // Function to copy URL to clipboard
-
   const handleDropdown = () => {
     const x = document.getElementById("productDetails");
     if (x!.style.display === "none") {
@@ -203,24 +203,20 @@ const ProductSingleDetails: React.FC = () => {
           </div>
 
           <div>
-            {/* <h2
-              onClick={toggleSidebar}
-              className="font-semibold underline cursor-pointer"
-            >
-              Size guide
-            </h2> */}
             <SizeChart isOpen={isSidebarOpen} onClose={toggleSidebar} />
           </div>
         </div>
+
         <div className="flex items-center space-s-4 md:pe-32 lg:pe-12 2xl:pe-32 3xl:pe-48 border-b border-gray-300 py-8">
           <Counter
+            setQuantity={setQuantity}
             quantity={quantity}
             onIncrement={() => setQuantity((prev) => prev + 1)}
             onDecrement={() =>
               setQuantity((prev) => (prev !== 1 ? prev - 1 : 1))
             }
             disableDecrement={quantity === 1}
-            disableIncrement={quantity === data?.stock}
+            disableIncrement={quantity >= data?.stock}
           />
           <Button
             onClick={addToCart}
@@ -237,12 +233,11 @@ const ProductSingleDetails: React.FC = () => {
 
         <div
           onClick={handleDropdown}
-          className="text-heading cursor-pointer flex justify-between   ml-1 text-sm md:text-sm lg:text-sm 2xl:text-base font-bold   mt-8 mb-3"
+          className="text-heading cursor-pointer flex justify-between ml-1 text-sm md:text-sm lg:text-sm 2xl:text-base font-bold mt-8 mb-3"
         >
           <p> Product Details and Overview</p>
 
           <p>
-            {" "}
             <RiArrowDropDownLine size={30} />
           </p>
         </div>
@@ -255,17 +250,6 @@ const ProductSingleDetails: React.FC = () => {
           ></p>
         </div>
 
-        <div>
-          {/* <Button
-						variant="slim"
-						className={`w-[200px] mt-5`}
-						// loading={addToCartLoader}
-						onClick={toggleModal}
-					>
-						<span className="p-2">Share</span>
-						<FaRegShareSquare size={20} />
-					</Button> */}
-        </div>
         <div className="py-6">
           <ul className="text-sm space-y-5 pb-1">
             <li>
