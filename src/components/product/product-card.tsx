@@ -23,7 +23,6 @@ const ProductCard: FC<ProductProps> = ({
   contactClassName = "",
   imageContentClassName = "",
   variant = "list",
-
   imgLoading,
 }) => {
   const placeholderImage = `${process.env.NEXT_PUBLIC_IMAGE_API_ENDPOINT}${product?.image?.thumbnail}`;

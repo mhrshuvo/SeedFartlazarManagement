@@ -40,6 +40,8 @@ const ProductSingleDetails: React.FC = () => {
   const [addToCartLoader, setAddToCartLoader] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
 
+  console.log(data);
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -115,49 +117,20 @@ const ProductSingleDetails: React.FC = () => {
     }
   };
 
+  const placeholderImage = `${process.env.NEXT_PUBLIC_IMAGE_API_ENDPOINT}${data?.image?.thumbnail}`;
+
   return (
     <div className="block lg:grid grid-cols-9 gap-x-10 xl:gap-x-14 pt-7 pb-10 lg:pb-14 2xl:pb-20 items-start">
       {width < 1025 ? (
-        <Carousel
-          pagination={{
-            clickable: true,
-          }}
-          breakpoints={productGalleryCarouselResponsive}
-          className="product-gallery"
-          buttonClassName="hidden"
-        >
-          {data?.gallery?.map((item, index: number) => (
-            <SwiperSlide key={`product-gallery-key-${index}`}>
-              <div className="col-span-1 transition duration-150 ease-in hover:opacity-90">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_API_ENDPOINT}${item?.thumbnail}`}
-                  alt={`${data?.name}--${index}`}
-                  className="object-cover w-full"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Carousel>
+        <div className="col-span-1 transition duration-150 ease-in hover:opacity-90">
+          <img src={placeholderImage} className="object-cover w-full" />
+        </div>
       ) : (
         // Product zoom in
         <div className="col-span-5 grid grid-cols-2 gap-2.5">
-          {data?.gallery?.map((item, index: number) => (
-            <div
-              key={index}
-              className="col-span-1 transition duration-150 ease-in  relative cursor-pointer"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_API_ENDPOINT}${item?.thumbnail}`}
-                  alt={`${data?.name}--${index}`}
-                  className="transition-transform duration-300 ease-in-out transform hover:scale-125"
-                  style={transformStyle}
-                />
-              </div>
-            </div>
-          ))}
+          <div className="relative overflow-hidden">
+            <img src={placeholderImage} style={transformStyle} />
+          </div>
         </div>
       )}
 
