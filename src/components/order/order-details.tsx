@@ -1,5 +1,7 @@
 import { OrderItem } from "@framework/types";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 const OrderItemCard = ({ product }: { product: OrderItem }) => {
   return (
     <tr
@@ -18,6 +20,22 @@ const OrderDetails: React.FC<{ className?: string; order: any }> = ({
   order,
 }) => {
   const { t } = useTranslation("common");
+
+  const router = useRouter();
+
+  const handleBkash = () => {
+    if (order?.bkash_url) {
+      window.location.href = order?.bkash_url;
+    }
+  };
+
+  const handlePay = () => {
+    toast.success(
+      "Order placed sucessfully. Our representative will contact you asap!!"
+    );
+
+    router.push("/");
+  };
 
   return (
     <div className={className}>
@@ -76,6 +94,28 @@ const OrderDetails: React.FC<{ className?: string; order: any }> = ({
           </tr>
         </tfoot>
       </table>
+
+      {order?.bkash_url && (
+        <div className="flex gap-4 justify-center items-center mt-4">
+          <div>
+            <button
+              onClick={() => handlePay()}
+              className="bg-green-600 px-6 py-2 rounded-lg text-white"
+            >
+              buy now pay later
+            </button>
+          </div>
+
+          <div>
+            <button
+              onClick={() => handleBkash()}
+              className="bg-pink-700 px-6 py-2 rounded-lg text-white"
+            >
+              Pay with Bkash
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

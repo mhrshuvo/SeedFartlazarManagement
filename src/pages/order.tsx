@@ -13,6 +13,8 @@ export default function Order() {
 
   let orderData: string | Record<string, unknown> = {};
 
+  console.log(orderData);
+
   // Satellite is the obj
   const encryptedData = router.query.satellite;
 

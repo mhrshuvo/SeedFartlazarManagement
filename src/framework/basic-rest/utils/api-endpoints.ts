@@ -27,6 +27,7 @@ export const API_ENDPOINTS = {
   MY_COUPONS: "/my_coupons",
   PRE_LOVED: "/pre_loved",
   MY_PRE_LOVED: "/my_pre_loved",
+  MY_ORDER: "/order",
 
   // Otp related endpoints
   REQUEST_OTP: "/requestOtp",

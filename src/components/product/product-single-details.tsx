@@ -9,8 +9,6 @@ import { ProductAttributes } from "./product-attributes";
 import isEmpty from "lodash/isEmpty";
 import Link from "@components/ui/link";
 import { useWindowSize } from "@utils/use-window-size";
-import Carousel from "@components/ui/carousel/carousel";
-import { SwiperSlide } from "swiper/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Modal from "@components/common/modal/modal";
 import ProductShareModal from "./product-share-modal";
@@ -18,15 +16,6 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import ProductFlashSaleGridLoader from "@components/ui/loaders/product-flash-sale-grid-loader";
 import SizeChart from "./product-size-chart";
 import Counter from "@components/common/counter";
-
-const productGalleryCarouselResponsive = {
-  "768": {
-    slidesPerView: 2,
-  },
-  "0": {
-    slidesPerView: 1,
-  },
-};
 
 const ProductSingleDetails: React.FC = () => {
   const {
@@ -50,19 +39,7 @@ const ProductSingleDetails: React.FC = () => {
 
   // Product zoom in
 
-  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: any) => {
-    const { left, top, width, height } =
-      e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - left) / width;
-    const y = (e.clientY - top) / height;
-    setHoverPosition({ x, y });
-  };
-
-  const handleMouseLeave = () => {
-    setHoverPosition({ x: 0, y: 0 });
-  };
+  const [hoverPosition] = useState({ x: 0, y: 0 });
 
   const transformStyle = {
     transformOrigin: `${hoverPosition.x * 100}% ${hoverPosition.y * 100}%`,
@@ -118,6 +95,7 @@ const ProductSingleDetails: React.FC = () => {
   };
 
   const placeholderImage = `${process.env.NEXT_PUBLIC_IMAGE_API_ENDPOINT}${data?.image?.thumbnail}`;
+  console.log(placeholderImage);
 
   return (
     <div className="block lg:grid grid-cols-9 gap-x-10 xl:gap-x-14 pt-7 pb-10 lg:pb-14 2xl:pb-20 items-start">

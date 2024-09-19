@@ -4,21 +4,56 @@ import { useTranslation } from "next-i18next";
 import http from "@framework/utils/http";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import CryptoJS from "crypto-js";
 
 const OrdersTable: React.FC = () => {
   const { t } = useTranslation("common");
-  const [myOrder, setMyOrder] = useState([]);
+  const [myOrders, setMyOrders] = useState([]);
+
+  const router = useRouter();
 
   // Get my orders
   useEffect(() => {
     const fetchMyOrders = async () => {
       const data = await http.get(API_ENDPOINTS.MY_ORDERS);
       const orderData = data?.data;
-      setMyOrder(orderData);
+      setMyOrders(orderData);
     };
 
     fetchMyOrders();
   }, []);
+
+  const secretKey: any = process.env.NEXT_PUBLIC_ENCRYPTION_KEY;
+
+  // Function to encrypt data
+  function encryptData(data: any, secretKey: string): string {
+    const dataString = JSON.stringify(data);
+    return CryptoJS.AES.encrypt(dataString, secretKey).toString();
+  }
+
+  const handleOrder = async (id: number) => {
+    try {
+      const data = await http.get(`${API_ENDPOINTS.MY_ORDER}/${id}`);
+      const orderData = data?.data;
+
+      if (!orderData) {
+        console.error("Order data not found.");
+        return;
+      }
+
+      // Encrypt the orderData before sending through router
+      const encryptedOrderData = encryptData(orderData, secretKey);
+      router.push({
+        pathname: "/order",
+        query: { satellite: encryptedOrderData },
+      });
+
+      return orderData;
+    } catch (error) {
+      console.error("Error fetching order:", error);
+    }
+  };
 
   return (
     <>
@@ -52,7 +87,7 @@ const OrdersTable: React.FC = () => {
             </tr>
           </thead>
 
-          {myOrder.map((order: any) => {
+          {myOrders.map((order: any) => {
             const dateString: string = order.created_at;
             const formattedDateTime: string = new Date(
               dateString
@@ -61,8 +96,11 @@ const OrdersTable: React.FC = () => {
               <tbody className="text-sm lg:text-base w-full">
                 <tr className="border-b border-gray-300 last:border-b-0">
                   <td className="px-4 py-5 text-start">
-                    <div className="underline hover:no-underline text-body">
-                      {order?.tracking_id}
+                    <div
+                      onClick={() => handleOrder(order?.id)}
+                      className="underline hover:no-underline text-body cursor-pointer"
+                    >
+                      <td>{order?.tracking_id}</td>
                     </div>
                   </td>
                   <td className="text-start lg:text-center px-4 py-5 text-heading">
